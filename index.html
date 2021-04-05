@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Circle Paint</title>
+        <meta name="veiwport" content="wdith=device-width, intial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Circle Paint</h1>
+        <canvas width="800" height="800"></canvas>
+        <div>
+            <span>
+                <input type="number" min="5" max="20" placeholder="Circle Radius" oninput="circleRadiusNum=this.value;" value="10">
+            </span>
+            <span>
+                <label for="circle_color"></label>
+                <input type="color" id="circle_color" oninput="circleColor=this.value; drawingCanvasCTX2D.strokeStyle=this.value;" value="#FF0000">
+            </span>
+            <span>
+                <input type="number" min="1" max="10" placeholder="Circle Border Width" oninput="circleBorderWidthNum=this.value; drawingCanvasCTX2D.lineWidth=this.value;" value="2">
+            </span>
+            <input type="button" value="Clear" onclick="clearArea();">
+        </div>
+        <div class="script">
+            <script src="main.js"></script>
+        </div>
+    </body>
+</html>
